@@ -46,42 +46,53 @@ class gfg
 // } Driver Code Ends
 
 
-
-
 class Solution 
 { 
     //Function to return max value that can be put in knapsack of capacity W.
     static int knapSack(int W, int wt[], int val[], int n) 
     { 
          // your code here 
-         int [] [] dp= new int[n][W+1];
+         
+         int ans=0;
+         int dp[][]= new int[n+1][W+1];
          
          
-        int ans=solve(W,wt,val,n,n-1,dp);
-        return ans;
-        
+         
+        ans= solve(W,wt,val,n,dp);
+         return ans;
+         
     } 
-   static int solve(int W, int wt[], int val[],int n,int index,int [][] dp)
-    {
-        if(index<=0|| W<0)
-        {
-            if(wt[0]<=W)
-            return val[0];
-            else return 0;
-        }
-        if(dp[index][W]!=0)
-        return dp[index][W];
-        
-     if (wt[index] > W) {
-            return solve(W, wt, val, n, index - 1,dp);
-        }
-        int include = val[index] + solve(W - wt[index], wt, val, n, index - 1,dp);
-        int exclude = solve(W, wt, val, n, index - 1,dp);
     
-        // Return the maximum of the two options
+   static  int solve(int W,int wt[],int val[],int n,int dp[][])
+    {
+        if(n==0 || W==0)
+        {
+            return 0;
+        }
         
-        dp[index][W]=Math.max(include, exclude);
-        return dp[index][W];
+        if(dp[n][W]!=0)
+        {
+            return dp[n][W];
+            
+        }
+        
+         int include=0;
+          int exclude=0;
+      if(wt[n-1]<=W)
+        {
+             include=val[n-1]+ solve(W-wt[n-1],wt,val,n-1,dp);
+             exclude=solve(W,wt,val,n-1,dp);
+             
+            return  dp[n][W]=Math.max(include ,exclude);
+            
+        }
+        
+       
+        return dp[n][W]=solve(W,wt,val,n-1,dp);
+        
+        
+        
+        
     }
 }
 
