@@ -24,28 +24,16 @@ class GfG {
 
 // User function Template for Java
 class Solution {
-    public long count(int[] coins, int N, int sum) {
-        long[][] dp = new long[N + 1][sum + 1];
-
-        // Base cases:
-        for (int i = 0; i <= N; i++) {
-            dp[i][0] = 1; // One way to make a sum of 0: don't use any coins
-        }
-        for (int j = 1; j <= sum; j++) {
-            dp[0][j] = 0; // No way to make a sum using 0 coins
-        }
-
-        // Fill the DP table
-        for (int i = 1; i <= N; i++) {
-            for (int j = 1; j <= sum; j++) {
-                if (coins[i - 1] <= j) {
-                    dp[i][j] = dp[i - 1][j] + dp[i][j - coins[i - 1]]; // Consider using the current coin or not
-                } else {
-                    dp[i][j] = dp[i - 1][j]; // Don't use the current coin (since its denomination is too large)
-                }
+    public long count(int coins[], int N, int sum) {
+        long dp[] = new long[sum + 1];
+        dp[0] = 1; // Base case: there is one way to make sum 0, which is by not selecting any coin
+        
+        for (int coin : coins) {
+            for (int i = coin; i <= sum; i++) {
+                dp[i] += dp[i - coin];
             }
         }
-
-        return dp[N][sum];
+        
+        return dp[sum];
     }
 }
