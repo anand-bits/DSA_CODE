@@ -10,17 +10,22 @@ GeeksforGeeks is a well-known platform for learning and practicing DSA concepts 
 
 The repository is structured as follows:
 
-├── Problem_1
-│ ├── Solution.java
-│ └── Problem_Description.md
-├── Problem_2
-│ ├── Solution.java
-│ └── Problem_Description.md
-└── ...
+- **Easy**
+  - [Problem 1](Easy/Problem_1)
+  - [Problem 2](Easy/Problem_2)
+  - ...
+  
+- **Medium**
+  - [Problem 1](Medium/Problem_1)
+  - [Problem 2](Medium/Problem_2)
+  - ...
+  
+- **Hard**
+  - [Problem 1](Hard/Problem_1)
+  - [Problem 2](Hard/Problem_2)
+  - ...
 
-- Each problem has its own directory.
-- Inside each problem directory, there is a `Solution.java` file containing the Java code for solving the problem.
-- Additionally, there is a `Problem_Description.md` file providing the problem statement and any additional details.
+Each problem directory contains a `Solution.java` file with the solution code and a `Problem_Description.md` file with the problem statement.
 
 ## Getting Started
 
@@ -28,8 +33,7 @@ To use this repository:
 
 1. Clone the repository to your local machine:
 
-git clone https://github.com/your-username/DSA_CODE.git
-
+git clone https://github.com/anand-bits/DSA_CODE.git
 
 2. Navigate to the directory of the problem you're interested in.
 3. Open the `Solution.java` file to view the code solution.
