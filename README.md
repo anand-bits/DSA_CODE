@@ -5,7 +5,11 @@ This repository contains solutions to various Data Structures and Algorithms (DS
 ## Overview
 
 GeeksforGeeks is a well-known platform for learning and practicing DSA concepts through coding problems. This repository serves as a collection of my solutions to the problems I've solved on GFG.
-![GFG](https://media.geeksforgeeks.org/wp-content/uploads/20220221170632/ezgifcomgifmaker1.gif)
+
+<div style="text-align:center;">
+  <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220221170632/ezgifcomgifmaker1.gif" alt="GFG" style="width: 300px; height: auto;">
+</div>
+
 
 ## Structure
 
@@ -54,3 +58,4 @@ Contributions to this repository are welcome. If you have a better solution to a
 ## License
 
 This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+](https://media.geeksforgeeks.org/wp-content/uploads/20220221170632/ezgifcomgifmaker1.gif)https://media.geeksforgeeks.org/wp-content/uploads/20220221170632/ezgifcomgifmaker1.gif
