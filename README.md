@@ -5,6 +5,7 @@ This repository contains solutions to various Data Structures and Algorithms (DS
 ## Overview
 
 GeeksforGeeks is a well-known platform for learning and practicing DSA concepts through coding problems. This repository serves as a collection of my solutions to the problems I've solved on GFG.
+![GFG](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200-min.png)
 
 ## Structure
 
